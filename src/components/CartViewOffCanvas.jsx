@@ -5,11 +5,11 @@ export default function CartViewOffCanvas({ cartItems }) {
 
   useEffect(() => {
 
-    // Initialize the cart with totalPrice based on the initial cartItems array
+    // Initialize the cart with totalPrice
     const initialCart = cartItems.map((item) => ({
       ...item,
-      quantity: 1, // Set an initial quantity for each item
-      totalPrice: item.price, // Initialize totalPrice based on price
+      quantity: 1, // Set initial quantity for each item
+      totalPrice: item.price, // Initialize totalPrice based on item price
     }));
     setCart(initialCart);
   }, [cartItems]);
@@ -36,12 +36,12 @@ export default function CartViewOffCanvas({ cartItems }) {
   // Calculate the total price for each item
   const calculateItemTotal = (item) => item.totalPrice;
 
-  // Calculate the overall total price
+  // Calculate the total price of all
   const total = cart.reduce((acc, item) => acc + item.totalPrice, 0);
 
   return (
     <>
-     {/* offcanvas */}
+     {/* Offcanvas of Total Price  */}
       <div
         className="offcanvas offcanvas-end bucket-canvas"
         style={{backgroundColor: "#1C1816"}}

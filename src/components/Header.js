@@ -47,11 +47,6 @@ export default function Header({cartCounter}) {
           data-bs-target="#offcanvasRight"
           aria-controls="offcanvasRight"
         >
-        {/* <img src="https://www.kfcpakistan.com/static/media/bucket-filled.d2ad11819eca0f28a8ac.svg"
-        alt="KFC"
-        width="40px"
-        height="40px">
-        </img> */}
         {cartCounter}
         </button>
       </a>

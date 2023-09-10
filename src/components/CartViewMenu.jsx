@@ -4,6 +4,8 @@ import { allItems } from "../data/prodcutsData";
 export default function CartViewMenu({product,addToCart}) {
   return (
     <>
+
+      {/* OffCanvas opened when click on the product details */}
       <div
         className="offcanvas offcanvas-end"
         style={{backgroundColor: "#1C1816"}}
@@ -11,13 +13,19 @@ export default function CartViewMenu({product,addToCart}) {
         id="cartviewoffcanvasRight-1"
         aria-labelledby="offcanvasRightLabel"
       >
+
+        {/* Offcanvas header */}
         <div className="offcanvas-header" style={{ borderBottom: '2px solid #EA002A'}}>
         <h4 style={{color: "white"}}>Item Details</h4>
         </div>
+
+        {/* OffCanvas body */}
         <div className="offcanvas-body cart-detail">
-            
+
         {product.length ? (
             
+        // Logic if product is added than show the details otherwise cart is empty
+        
             product.map(p => 
             <p>
 
@@ -37,11 +45,10 @@ export default function CartViewMenu({product,addToCart}) {
                 <br></br>
                 <button className="cart-detail-btn btn-primary" 
                 onClick={()=>addToCart(p) }
-                // data-bs-toggle="offcanvas"
                 data-bs-dismiss="offcanvas"
-                id="liveToastBtn"
                 >ADD TO CART</button>
             </p>)
+
           ) : (
             <p>Cart is Empty</p>
           )

@@ -11,7 +11,6 @@ export default function KfcCard({ item, addToCart, showProduct }) {
           <div className="title">
             <h5 className="p-title">{item.title}</h5>
           </div>
-          {/* <p className="p-text">{item.description}</p> */}
           <h4 className="p-price">Rs. {item.price}</h4>
           <div className="add-cart">
             <button
