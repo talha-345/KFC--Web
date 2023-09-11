@@ -62,7 +62,7 @@ export default function CartViewOffCanvas({ cartItems }) {
           {cart.length ? (
             cart.map((c, index) => (
               <>
-              <div key={index}>
+              <div className="item-details" key={index}>
                 {/* Added Product  */}
                 <div className= "canvas-product">
                 <img src={c.image} className="card-img-top" alt="kfc card" style={{width:100}}/>
